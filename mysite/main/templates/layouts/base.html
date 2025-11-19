@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/style.css' %}">
+    <title>NostalgiaEra</title>
+
+</head>
+<body>
+
+
+<header>
+    <div class="container">
+        <div class="d-flex logos">
+            <a href="#">
+                <span class="nostalgia-word">Nostalgia</span><span class="era-word">Era</span>
+            </a>
+
+            <img id="DeLorean" src="{% static 'bootstrap/img/head/Screenshot_215.png' %}" alt="DeLorean">
+
+        </div>
+
+        <section class="buttons d-flex ">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle btn-intop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Выбор таймлайна
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">2017</a></li>
+                <li><a class="dropdown-item" href="#">2007</a></li>
+                <li><a class="dropdown-item" href="#">1997</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary btn-intop">Видео</button>
+            <button type="button" class="btn btn-primary btn-intop">Музыка</button>
+            <button type="button" class="btn btn-primary btn-intop">Игры</button>
+        </section>
+    </div>
+</header>
+
+{% block content %}
+{% endblock %}
+
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>
