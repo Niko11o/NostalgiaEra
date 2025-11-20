@@ -19,6 +19,12 @@ body{
     
 }
 
+/* Сброс синего свечения в кнопочках в шапке */
+.btn-link {
+    text-decoration: none;
+    color: white;
+}
+
 .dropdown-item {
     width:300px;
 }
