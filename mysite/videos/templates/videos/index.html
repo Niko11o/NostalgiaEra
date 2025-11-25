@@ -1,31 +1,22 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-
-
-<div class="video-container">
+<div class="container my-4"> <!-- добавил класс container для ограничения ширины -->
     <div class="row">
-        <!-- Первая карточка -->
-        <div class="col-xl-4 mb-4">
-            <div class="card rounded mx-auto" style="width: 18rem;">
-                <!-- Картинка с ссылкой -->
-                {% for video in videos %}
+        {% for video in videos %}
+        <div class="col col-xl-3 ">
+            <div class="card rounded" style="height: 100%;"> <!-- для равномерной высоты -->
                 <a href="{{ video.chanel }}" target="_blank">
-                  <img src="{{ video.preview.url }}" class="card-img-top" alt="Заглушка под видосяо">
+                    <img src="{{ video.preview.url }}" class="card-img-top" alt="Заглушка под видео">
                 </a>
                 <div class="card-body">
-                 <h5 class="card-title mb-1">{{ video.name }} Название видео</h5>
-                 <p class="card-text mb-1 text-muted">{{ video.chanel }}Канал</p>
-                 <p class="card-text"><small class="text-muted">{{ video.date }} Дата загрузки</small></p>
-                {% endfor %}
+                    <h5 class="card-title mb-1">{{ video.name }}</h5>
+                    <p class="card-text mb-1 text-muted">{{ video.chanel }}</p>
+                    <p class="card-text"><small class="text-muted">{{ video.date }}</small></p>
                 </div>
             </div>
         </div>
-
+        {% endfor %}
     </div>
 </div>
-
-
 {% endblock %}
-
-

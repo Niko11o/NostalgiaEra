@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+
+<div class="video-container">
+    <div class="row">
+        <!-- Первая карточка -->
+        <div class="col-xl-4 mb-4 mx-5 mt-5">
+            <div class="card rounded mx-auto" style="width: 18rem;">
+                <!-- Картинка с ссылкой -->
+                {% for video in videos %}
+                <a href="{{ video.chanel }}" target="_blank">
+                  <img src="{{ video.preview.url }}" class="card-img-top" alt="Заглушка под видосяо">
+                </a>
+                <div class="card-body">
+                 <h5 class="card-title mb-1">{{ video.name }} Название видео</h5>
+                 <p class="card-text mb-1 text-muted">{{ video.chanel }}Канал</p>
+                 <p class="card-text"><small class="text-muted">{{ video.date }} Дата загрузки</small></p>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}
+
+
