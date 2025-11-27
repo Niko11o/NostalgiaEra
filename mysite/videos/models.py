@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Video(models.Model):
@@ -16,4 +17,4 @@ class Video(models.Model):
         verbose_name = 'Добавление видео'
 
     def get_absolute_url(self):
-        pass
+        return reverse('videos:video_detail', args=[self.id, self.slug])
