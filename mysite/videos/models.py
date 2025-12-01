@@ -14,7 +14,7 @@ class YearFilter(models.Model):
         return self.year
 
     def get_absolute_url(self):
-        return reverse('main:product_list_by_category', args=[self.slug])
+        return reverse('videos:product_list_by_year', args=[self.slug])
 
 
 class Video(models.Model):
