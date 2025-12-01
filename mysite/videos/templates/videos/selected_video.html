@@ -5,11 +5,25 @@
 
 <div class="container">
     <div class="row">
-        <div class="col xl-10">
+        <div class="col xl-8  mt-5">
 
-            <p>Затычка</p>
+            <div class="on_page_video">
+                <a href="{{ selected.chanel }}">
+                    <img class="on_page_img" src="{{ selected.preview.url }}" alt="Превьюха">
+                </a>
+                <div class="on_page_info mt-5">
+                    <p class="on_page_text">{{ selected.name }}</p>
+                    <p class="on_page_text">{{ selected.chanel }}</p>
+                    <p class="on_page_text">{{ selected.date }}</p>
+                    <p class="on_page_text"></p>
+                </div>
+            </div>
 
 
+        </div>
+
+        <div class="col-4 mt-5 text-center">
+            <p>Рекомендуем</p>
         </div>
 
     </div>
