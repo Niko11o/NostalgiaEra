@@ -24,7 +24,22 @@
 
         <div class="col-4 mt-5 text-center">
             <p>Рекомендуем</p>
+            {% if related_videos %}
+            {% for selected in related_videos %}
+            <div class="card rounded" style="height: 100%;"> <!-- для равномерной высоты -->
+                <a href="{{ selected.get_absolute_url }}" target="_blank"> <!-- Место под get_absolute_url -->
+                    <img src="{{ selected.preview.url }}" class="card-img-top" alt="Заглушка под видео">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title mb-1">{{ selected.name }}</h5>
+                    <p class="card-text mb-1 text-muted">{{ selected.chanel }}</p>
+                    <p class="card-text"><small class="text-muted">{{ selected.date }}</small></p>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
         </div>
+
 
     </div>
 </div>
