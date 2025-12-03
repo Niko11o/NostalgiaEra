@@ -1,10 +1,10 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-<div class="container my-4"> <!-- добавил класс container для ограничения ширины -->
+<div class="container videos_index_contain my-4"> <!-- добавил класс container для ограничения ширины -->
     <div class="row">
         {% for video in videos %}
-        <div class="col col-xl-3 ">
+        <div class="col col-xl-4 mb-4  ">
             <div class="card rounded" style="height: 100%;"> <!-- для равномерной высоты -->
                 <a href="{{ video.get_absolute_url }}" target="_blank"> <!-- Место под get_absolute_url -->
                     <img src="{{ video.preview.url }}" class="card-img-top" alt="Заглушка под видео">
