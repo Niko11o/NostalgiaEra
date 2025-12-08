@@ -24,7 +24,13 @@ body{
 }
 .btn-intop:hover{
     background-color: var(--color1);
+    border-color: var(--color1);
+    transition: border-color 0.15s ease;
 
+}
+
+.btn-intop:active {
+    background-color: var(--color1);
 }
 
 /* Сброс синего свечения в кнопочках в шапке */
@@ -37,7 +43,7 @@ body{
     text-decoration: none;
     color: white;
 }
-}
+
 
 .dropdown-item {
     width:300px;
