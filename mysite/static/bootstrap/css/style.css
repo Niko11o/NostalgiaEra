@@ -13,18 +13,30 @@ body{
 .btn-intop {
     width: 350px;
     height: 60px;
-    font-size: 20px;
+    font-size: 24px;
     font-family: "Roboto", sans-serif;
     border-radius: 0px;
     border-color: #808080;
     background-color:#808080;
+    transition: background-color 0.15s ease;
+    text-decoration: none;
     
+}
+.btn-intop:hover{
+    background-color: var(--color1);
+
 }
 
 /* Сброс синего свечения в кнопочках в шапке */
 .btn-link {
     text-decoration: none;
     color: white;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+    color: white;
+}
 }
 
 .dropdown-item {
