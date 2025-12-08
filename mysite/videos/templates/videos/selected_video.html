@@ -8,32 +8,34 @@
         <div class="col xl-8  mt-5">
 
             <div class="on_page_video">
-                <a href="{{ selected.chanel }}">
-                    <img class="on_page_img" src="{{ selected.preview.url }}" alt="Превьюха">
-                </a>
+                   <a href="{{ selected.chanel }}">
+                       <div class="image-container">
+                           <img class="on_page_img" src="{{ selected.preview.url }}" alt="Превьюха">
+                           <div class="play_button"></div>
+                       </div>
+                   </a>
                 <div class="on_page_info mt-5">
-                    <p class="on_page_text">{{ selected.name }}</p>
-                    <p class="on_page_text">{{ selected.chanel }}</p>
-                    <p class="on_page_text">{{ selected.date }}</p>
-                    <p class="on_page_text"></p>
+                    <p class="selected_on_page_text">{{ selected.name }}</p>
+                    <p class="selected_on_page_text">{{ selected.chanel }}</p>
+                    <p class="selected_on_page_text">{{ selected.date }}</p>
+                    <p class="selected_on_page_text"></p>
                 </div>
             </div>
 
 
         </div>
 
-        <div class="col-4 mt-5 text-center">
-            <p>Рекомендуем</p>
+        <div class="col-4 mt-5">
             {% if related_videos %}
             {% for selected in related_videos %}
-            <div class="card rounded" style="height: 100%;"> <!-- для равномерной высоты -->
+            <div class="card rounded mb-5 d-flex related_card flex-row" style="height: 15%;"> <!-- для равномерной высоты -->
                 <a href="{{ selected.get_absolute_url }}" target="_blank"> <!-- Место под get_absolute_url -->
-                    <img src="{{ selected.preview.url }}" class="card-img-top" alt="Заглушка под видео">
+                    <img src="{{ selected.preview.url }}" class="card-img-top" alt="Заглушка под видео" style="height: 100%; width:200px">
                 </a>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">{{ selected.name }}</h5>
-                    <p class="card-text mb-1 text-muted">{{ selected.chanel }}</p>
-                    <p class="card-text"><small class="text-muted">{{ selected.date }}</small></p>
+                <div class="card-body text-start">
+                    <h5 class="related_card-title mb-1">{{ selected.name }}</h5>
+                    <p class="related_selected_card-text mb-1 text-muted">{{ selected.chanel }}</p>
+                    <p class="related_card-text"><small class="text-muted">{{ selected.date }}</small></p>
                 </div>
             </div>
             {% endfor %}
@@ -47,6 +49,26 @@
 {% endblock %}
 
 
+<!--
+        <div class="col-4 mt-5 text-center">
+            <p>Рекомендуем</p>
+            {% if related_videos %}
+            {% for selected in related_videos %}
+            <div class="card rounded" style="height: 100%;">
+                <a href="{{ selected.get_absolute_url }}" target="_blank">
+                    <img src="{{ selected.preview.url }}" class="card-img-top" alt="Заглушка под видео">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title mb-1">{{ selected.name }}</h5>
+                    <p class="card-text mb-1 text-muted">{{ selected.chanel }}</p>
+                    <p class="card-text"><small class="text-muted">{{ selected.date }}</small></p>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+-->
 
 
 

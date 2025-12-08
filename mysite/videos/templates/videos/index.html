@@ -16,18 +16,18 @@
 </div>
 
 
-<div class="container videos_index_contain my-4"> <!-- добавил класс container для ограничения ширины -->
+<div class="container my-4"> <!-- добавил класс container для ограничения ширины -->
     <div class="row">
         {% for video in videos %}
-        <div class="col col-xl-4 mb-4  ">
-            <div class="card rounded" style="height: 100%;"> <!-- для равномерной высоты -->
+        <div class="col col-xl-4 mb-4">
+            <div class="card rounded videos_index_contain" style="height: 100%;"> <!-- для равномерной высоты -->
                 <a href="{{ video.get_absolute_url }}" target="_blank"> <!-- Место под get_absolute_url -->
                     <img src="{{ video.preview.url }}" class="card-img-top" alt="Заглушка под видео">
                 </a>
                 <div class="card-body">
-                    <h5 class="card-title mb-1">{{ video.name }}</h5>
-                    <p class="card-text mb-1 text-muted">{{ video.chanel }}</p>
-                    <p class="card-text"><small class="text-muted">{{ video.date }}</small></p>
+                    <h5 class="videos_card-title mb-1">{{ video.name }}</h5>
+                    <p class="videos_card-text mb-1 text-muted">{{ video.chanel }}</p>
+                    <p class="videos_card-text"><small class="text-muted">{{ video.date }}</small></p>
                 </div>
             </div>
         </div>
