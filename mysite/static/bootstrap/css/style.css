@@ -186,6 +186,19 @@ a {
 }
 
 
+/*  games/index.html  */
+
+.game_img_top{
+    width:100%;
+    height:600px;
+    border-radius: 5px 5px 0px 0px;
+}
+.game_card{
+    background-color:white;
+    border-radius: 5px;
+
+}
+
 
 
 

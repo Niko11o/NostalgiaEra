@@ -7,8 +7,8 @@ class YearFilter(models.Model):
 
     class Meta:
         ordering = ('year',)
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
+        verbose_name = 'Год'
+        verbose_name_plural = 'Года'
 
     def __str__(self):
         return self.year

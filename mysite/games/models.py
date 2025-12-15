@@ -10,21 +10,22 @@ class YearFilter(models.Model):
 
     class Meta:
         ordering = ('year',)
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
+        verbose_name = 'Год'
+        verbose_name_plural = 'Года'
 
     def __str__(self):
         return self.year
-
+"""
     def get_absolute_url(self):
         return reverse('###:product_list_by_year', args=[self.slug])
-
+"""
 
 
 class Games(models.Model):
     year = models.ForeignKey(YearFilter, db_index=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, db_index=True)
     genre = models.CharField(max_length=50, db_index=True)
+    preview = models.ImageField(upload_to='game_previev/',blank=True, null=True)
     description = models.CharField()
     date = models.DateTimeField()
     slug = models.SlugField(max_length=100, unique=100)
@@ -35,6 +36,8 @@ class Games(models.Model):
 
     class Meta:
         verbose_name = 'Добавление игры'
-
+"""
     def get_absolute_url(self):
         return reverse('games:###', args=[self.id, self.slug])
+    
+"""
