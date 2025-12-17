@@ -41,3 +41,6 @@ class Games(models.Model):
         return reverse('games:games_detail', args=[self.id, self.slug])
     
 
+class Screenshot(models.Model):
+    game = models.ForeignKey(Games, related_name='screenshots', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='screenshots/')

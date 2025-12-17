@@ -29,7 +29,7 @@
             {% if related_videos %}
             {% for selected in related_videos %}
             <div class="card rounded mb-5 d-flex related_card flex-row" style="height: 15%;"> <!-- для равномерной высоты -->
-                <a href="{{ selected.get_absolute_url }}" target="_blank"> <!-- Место под get_absolute_url -->
+                <a href="{{ selected.get_absolute_url }}" target="_self"> <!-- Место под get_absolute_url -->
                     <img src="{{ selected.preview.url }}" class="card-img-top" alt="Заглушка под видео" style="height: 100%; width:200px">
                 </a>
                 <div class="card-body text-start">

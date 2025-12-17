@@ -21,7 +21,7 @@
         {% for video in videos %}
         <div class="col col-xl-4 mb-4">
             <div class="card rounded videos_index_contain" style="height: 100%;"> <!-- для равномерной высоты -->
-                <a href="{{ video.get_absolute_url }}" target="_blank"> <!-- Место под get_absolute_url -->
+                <a href="{{ video.get_absolute_url }}" target="_self"> <!-- Место под get_absolute_url -->
                     <img src="{{ video.preview.url }}" class="card-img-top" alt="Заглушка под видео">
                 </a>
                 <div class="card-body">

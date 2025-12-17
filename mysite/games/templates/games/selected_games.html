@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col mt-5">
-            Проверка связи
+            <h1> {{ selected.name }}</h1>
         </div>
     </div>
 </div>
@@ -13,8 +13,44 @@
 <div class="container">
     <div class="row">
         <div class="col col-xl-6 mt-3">
-            <img class="game_selected_poster" src="{{ selected.preview.url }}" alt="Постер игры">
+            <div class="game_selected_poster">
+                <img class="game_selected_poster" src="{{ selected.preview.url }}" alt="Постер игры">
+            </div>
 
+        </div>
+
+        <div class="col col-xl-6 mt-3">
+            <div class="game_selected_info">
+                <p>{{ selected.genre}}</p>
+                <p>{{ selected.date }}</p>
+                <p>{{ selected.description}} <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid aperiam at corporis est illo labore laborum libero modi placeat qui reprehenderit repudiandae sapiente vel, voluptas? A, accusantium assumenda at blanditiis commodi consequatur cumque debitis dignissimos distinctio eveniet facilis hic iusto magni minima mollitia necessitatibus non nostrum pariatur possimus praesentium quas quibusdam repudiandae sed similique sit suscipit, tempora unde vel vero voluptatem. Alias aut, doloribus incidunt minima molestias necessitatibus provident? Amet deserunt eos ex nobis placeat quidem quis quisquam repellendus ut voluptates. Ab accusantium ad alias aliquam aspernatur at, culpa debitis dicta dolorem eaque esse eveniet excepturi facilis, hic ipsam magnam nostrum obcaecati optio, perspiciatis porro quaerat quam qui quo repellendus reprehenderit sed sequi similique soluta ullam veritatis. Consequuntur dolorum fuga fugit natus neque nisi officiis optio, perspiciatis quasi rem sunt tempora veniam, voluptatem. Assumenda aut, corporis culpa cum cumque distinctio dolores ducimus ea earum eius error exercitationem facilis fuga fugiat harum incidunt, ipsum iure labore libero minima modi necessitatibus neque nobis, non nostrum odio perferendis possimus quaerat rem repellendus repudiandae suscipit voluptates voluptatum. Aliquam aliquid, animi, aspernatur aut consectetur, dicta earum eligendi esse ex facere fugit iste minus molestias natus numquam optio quasi ratione recusandae reiciendis sed tempore vel!</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div id="screenshotsCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    {% for shot in selected.screenshots.all %}
+                      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <img src="{{ shot.image.url }}" class="d-block w-100" alt="Скриншот {{ forloop.counter }}">
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                  </button>
+            </div>
 
         </div>
     </div>

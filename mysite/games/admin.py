@@ -1,12 +1,19 @@
 from django.contrib import admin
-from .models import Games, YearFilter
+from .models import Games, Screenshot , YearFilter
 
 # Register your models here.
 
 
 
+class ScreenshotInline(admin.TabularInline):
+    model = Screenshot
+    extra = 5
+
+
 class GamesAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
+    inlines = [ScreenshotInline]
+
 
 admin.site.register(Games, GamesAdmin)
 
