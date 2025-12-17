@@ -199,6 +199,14 @@ a {
 
 }
 
+/*   games/SELECTED_GAME    */
+
+.game_selected_poster{
+    width:100%;
+    height: 600px;
+    border-radius: 5px;
+}
+
 
 
 

@@ -36,8 +36,8 @@ class Games(models.Model):
 
     class Meta:
         verbose_name = 'Добавление игры'
-"""
+
     def get_absolute_url(self):
-        return reverse('games:###', args=[self.id, self.slug])
+        return reverse('games:games_detail', args=[self.id, self.slug])
     
-"""
+
