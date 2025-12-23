@@ -70,11 +70,8 @@ a {
 }
 
 #DeLorean {
-    width: 300px;
-    height: 70px;
-    margin-left: -30px;
-    margin-top: 13px;
-    z-index: -1;
+    width: 100%px;
+    height: 250px;
 }
 
 .text-block{
@@ -92,6 +89,11 @@ a {
     width: 550px;
     height: 350px;
     background-color: var(--color1);
+}
+
+.portal-images-img{
+    width: 550px;
+    height: 350px;
 }
 
 

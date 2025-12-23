@@ -12,7 +12,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col col-xl-6 mt-3">
+        <div class="col col-xl-6 mt-2">
             <div class="game_selected_poster">
                 <img class="game_selected_poster" src="{{ selected.preview.url }}" alt="Постер игры">
             </div>
@@ -33,9 +33,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col mt-4">
             <div id="screenshotsCarousel" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-inner">
+                      <h1 class="mb-3">Скриншоты</h1>
                     {% for shot in selected.screenshots.all %}
                       <div class="carousel-item {% if forloop.first %}active{% endif %}">
                         <img src="{{ shot.image.url }}" class="d-block w-100" alt="Скриншот {{ forloop.counter }}">
