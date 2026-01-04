@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls',namespace='main')),
     path('videos/', include('videos.urls'), ),
-    path('games/', include('games.urls'))
+    path('games/', include('games.urls')),
+    path('music/', include('music.urls')),
 ]
 
 if settings.DEBUG:
