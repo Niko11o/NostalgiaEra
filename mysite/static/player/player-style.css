@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.wrapper {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background: #E4E9ED;
+}
+
+.btn-player {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+.player {
+    background: white;
+    border-radius: 30px;
+    max-width: 480px;
+    max-height: 262px;
+    width: 100%;
+    padding: 25px;
+
+    .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #283C5B;
+    text-align: center;
+
+}
+
+.song {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #283C5B;
+    text-align: center;
+
+}
+
+.progress_container {
+    background: #6794CF;
+    border-radius: 5px;
+    width: 100%;
+    height: 10px;
+    margin-top: 63px;
+    display: flex;
+    align-item: center;
+    cursor: pointer;
+
+    .progress{
+        background: #283C5B;
+        border-radius: 5px;
+        height: 10px;
+
+        /* width: 150px; */
+    }
+
+
+}
+
+.buttons-player{
+    display: flex;
+    justify-content: space-between;
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 45px;
+
+
+
+
+}
+
+
+
+}

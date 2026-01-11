@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'videos',
     'games',
     'music',
-    'rest-framework',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

@@ -1,8 +1,36 @@
 {% extends 'layouts/base.html' %}
-
+{% load static %}
 
 {% block content %}
 
-Щщец прямо сейчас делает эту страницу. Задоньте на винище!
+<div class="container">
+    <div class="row">
+        <div class="col col-xl-12 mt-5">
+            <div class="wrapper">
+
+                <div class="player">
+                    <div class="title">Now playing</div>
+                    <div class="song">Fall from the sky</div>
+                    <audio class="audio"></audio>
+                    <div class="progress_container">
+                        <div class="progress"></div>
+                    </div>
+
+                    <div class="buttons-player">
+                        <div class="btn-prev"> <img class="btn-player" src='{% static "icons/prev.png" %}' alt="prevpng"></div>
+                        <div class="btn-play"><img class="btn-player img_src" src='{% static "icons/play.png" %}' alt="playpng"></div>
+                        <div class="btn-next"><img class="btn-player" src='{% static "icons/next.png" %}' alt="nextpng"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
 
 {% endblock %}
+
+
