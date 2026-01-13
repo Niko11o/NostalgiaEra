@@ -38,6 +38,13 @@ function loadSong(index) {
     const track = songs[index];
     songTitle.textContent = track.title;
     audio.src = track.file;
+    audio.load();
+
+    // Ждём, пока браузер узнает длительность трека
+    audio.addEventListener('loadedmetadata', () => {
+        // Теперь duration доступен
+        console.log('Длительность трека:', audio.duration);
+    }, { once: true }); // событие одноразовое
 }
 
 
@@ -107,6 +114,7 @@ function setProgress(e) {
     const width = this.clientWidth
     const clickX = e.offsetX
     const duration = audio.duration
+
 
     audio.currentTime = (clickX / width) * duration
 
