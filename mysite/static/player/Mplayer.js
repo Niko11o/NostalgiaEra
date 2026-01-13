@@ -7,7 +7,8 @@ const player = document.querySelector('.player'),
       progress_container = document.querySelector('.progress_container'),
       progress =  document.querySelector('.progress'),
       songTitle = document.querySelector('.song'),
-      imgSrc = document.querySelector('.img_src')
+      imgSrc = document.querySelector('.img_src'),
+      yearSlug = player.dataset.year
 
 
 
@@ -18,13 +19,19 @@ let songs = []
 // Песня по умолчанию
 let songIndex = 0;
 
-fetch('/music/api/tracks/') //вставить маршрут
+fetch(`/music/api/tracks/?year=${yearSlug}`)
   .then(response => response.json())
   .then(data => {
     songs = data;
+
+    if (songs.length === 0) {
+        songTitle.textContent = 'Нет треков для этого года';
+        return;
+    }
+
+    songIndex = 0;
     loadSong(songIndex);
   });
-
 
 // Инициализация
 function loadSong(index) {
