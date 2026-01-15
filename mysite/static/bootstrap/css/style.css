@@ -86,16 +86,55 @@ a {
 
 
 .portal-images{
+    overflow: hidden;
     width: 550px;
     height: 350px;
     background-color: var(--color1);
 }
 
 .portal-images-img{
+    display: block;
     width: 550px;
     height: 350px;
+    transition: transform 0.3s ease;
+}
+.portal-images::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* степень затемнения */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    }
+
+.portal-images:hover .portal-images-img {
+    transform: scale(1.05);
 }
 
+.portal-images:hover::before {
+    opacity: 1;
+}
+
+
+
+.portal-year {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color1);
+    z-index: 2;
+    transition: transform 0.3s ease;
+
+}
+
+.portal-images:hover {
+    background-color:black;
+}
+
+.portal-images:hover .portal-year {
+    transform: scale(1.15)
+
+}
 
 /*  Гарнитуры, шрифты и стиль карточек   */
 
