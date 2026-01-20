@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-xl-6 mt-5 mb-5 ">
+            <div class="login-board">
+                <h2>Вход</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                   <button type="submit">Войти</button>
+                </form>
+
+                <a href="{% url 'register' %}">Регистрация</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+

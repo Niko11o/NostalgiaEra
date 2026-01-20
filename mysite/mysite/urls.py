@@ -26,6 +26,7 @@ urlpatterns = [
     path('games/', include('games.urls')),
     path('music/', include('music.urls')),
     path('api/', include('rest_framework.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 
 if settings.DEBUG:
