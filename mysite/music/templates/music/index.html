@@ -28,6 +28,27 @@
 
 
         </div>
+
+
+
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-xl-12 mt-5">
+
+            <div class="track-list">
+                {% for music in musics %}
+                    <div class="track-item" data-index="{{ forloop.counter0 }}">
+                        <span class="track-number"> {{ forloop.counter }}.</span>
+                        <span class="track-title">{{ music.title }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
     </div>
 </div>
 

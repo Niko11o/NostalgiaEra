@@ -86,3 +86,33 @@
 
 
 }
+
+
+.track-list {
+    max-width: 2000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.track-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #E4E9ED;
+}
+
+.track-item:hover {
+    background: #E4E9ED;
+}
+
+.track-item.active {
+    background: #6794CF;
+    color: white;
+}
+
+.track-number {
+    font-weight: bold;
+}

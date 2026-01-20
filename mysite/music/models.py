@@ -25,3 +25,9 @@ class Track(models.Model):
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='tracks/')  # путь к аудиофайлу
     order = models.PositiveIntegerField(default=0, blank=True)  # порядок воспроизведения, если нужно
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Добавление музыки'

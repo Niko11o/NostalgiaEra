@@ -10,6 +10,8 @@ const player = document.querySelector('.player'),
       imgSrc = document.querySelector('.img_src'),
       yearSlug = player.dataset.year
 
+      trackItems = document.querySelectorAll('.track-item')
+
 
 
 // Названия песен
@@ -23,6 +25,7 @@ fetch(`/music/api/tracks/?year=${yearSlug}`)
   .then(response => response.json())
   .then(data => {
     songs = data;
+    activateTrackList();
 
     if (songs.length === 0) {
         songTitle.textContent = 'Нет треков для этого года';
@@ -39,6 +42,7 @@ function loadSong(index) {
     songTitle.textContent = track.title;
     audio.src = track.file;
     audio.load();
+    setActiveTrack();
 
     // Ждём, пока браузер узнает длительность трека
     audio.addEventListener('loadedmetadata', () => {
@@ -123,3 +127,24 @@ progress_container.addEventListener('click', setProgress)
 
 // Автопереключение после окончания
 audio.addEventListener('ended', nextSong)
+
+
+
+function setActiveTrack() {
+    trackItems.forEach(item => item.classList.remove('active'));
+    if (trackItems[songIndex]) {
+        trackItems[songIndex].classList.add('active');
+    }
+}
+
+function activateTrackList() {
+    trackItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const index = Number(item.dataset.index);
+            songIndex = index;
+            loadSong(songIndex);
+            playSong();
+            setActiveTrack();
+        });
+    });
+}
