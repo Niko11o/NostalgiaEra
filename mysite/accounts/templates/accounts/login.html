@@ -3,14 +3,17 @@
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col col-xl-6 mt-5 mb-5 ">
-            <div class="login-board">
-                <h2>Вход</h2>
+    <div class="row d-flex justify-content-center">
+        <div class="col col-xl-6 mt-5 mb-5 d-flex justify-content-center">
+            <div class="login-board ">
+                <h2 class="login-logout-title">Вход</h2>
                 <form method="post">
                     {% csrf_token %}
-                    {{ form.as_p }}
-                   <button type="submit">Войти</button>
+                    <div class="auth-fields">
+                        <input class="auth-field" type="text" name="username" placeholder="Логин">
+                        <input  class="auth-field" type="password" name="password" placeholder="Пароль">
+                    </div>
+                   <button class="login-button" type="submit">Войти</button>
                 </form>
 
                 <a href="{% url 'register' %}">Регистрация</a>
