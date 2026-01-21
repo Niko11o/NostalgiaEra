@@ -4,14 +4,21 @@
 
 <div class="container">
     <div class="row d-flex justify-content-center">
-        <div class="col col-xl-6 mt-5 mb-5 d-flex justify-content-center">
+        <div class="col col-xl-6 mt-5 mb-5 d-flex ">
             <div class="login-board ">
                 <h2 class="login-logout-title">Вход</h2>
+
                 <form method="post">
                     {% csrf_token %}
+                    {% if form.errors %}
+                        <div class="auth-error">
+                            Неверный логин или пароль
+                        </div>
+                    {% endif %}
+
                     <div class="auth-fields">
-                        <input class="auth-field" type="text" name="username" placeholder="Логин">
-                        <input  class="auth-field" type="password" name="password" placeholder="Пароль">
+                        <input class="auth-field" type="text" name="username" placeholder="Логин" required>
+                        <input  class="auth-field" type="password" name="password" placeholder="Пароль" required>
                     </div>
                    <button class="login-button" type="submit">Войти</button>
                 </form>
