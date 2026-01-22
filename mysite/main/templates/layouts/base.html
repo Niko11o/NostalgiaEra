@@ -21,6 +21,18 @@
                 <span class="nostalgia-word">Nostalgia</span><span class="era-word">Era</span>
             </a>
 
+            <a href="{% url 'auth:login' %}" class="ms-auto mt-3">
+            <div class="login-place hstack gap-3">
+                <div class="login-square d-flex justify-content-center align-items-center"><img src="{% static 'icons/person.svg' %}" alt="Иконка логина" class="ikonochka"> </div>
+                <p class="login-status mt-3 mx-3">
+                {% if user.is_authenticated %}
+                    {{ user.username }}
+                {% else %}
+                    Авторизация
+                {% endif %}
+                </p>
+            </div>
+            </a>
 
         </div>
 

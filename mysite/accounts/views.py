@@ -14,7 +14,7 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')  # поменяй на свой URL
+            return redirect('main:home')  # поменяй на свой URL
     else:
         form = RegisterForm()
 
@@ -22,4 +22,4 @@ def register_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('login')
+    return redirect('auth:login')
