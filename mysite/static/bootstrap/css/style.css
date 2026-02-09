@@ -152,9 +152,15 @@ a {
     font-weight:600;
 }
 
+. related_card-text{
+    color: #808080;
+}
+
+
 .card-body {
     background-color: #2E2E2E;
     color:#808080;
+
 }
 
 
@@ -196,7 +202,7 @@ a {
 .on_page_info {
     width: 400px;
     height: 120px;
-    background-color: var(--color2);
+    background-color: #2E2E2E;
     padding-left: 10px;
     padding-top: 10px;
     border-radius: 5px;

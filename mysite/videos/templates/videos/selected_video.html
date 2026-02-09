@@ -8,7 +8,7 @@
         <div class="col xl-8  mt-5">
 
             <div class="on_page_video">
-                   <a href="{{ selected.chanel }}">
+                   <a href="{{ selected.redirect }}">
                        <div class="image-container">
                            <img class="on_page_img" src="{{ selected.preview.url }}" alt="Превьюха">
                            <div class="play_button"></div>
@@ -28,14 +28,14 @@
         <div class="col-4 mt-5">
             {% if related_videos %}
             {% for selected in related_videos %}
-            <div class="card rounded mb-5 d-flex related_card flex-row" style="height: 15%;"> <!-- для равномерной высоты -->
+            <div class="card rounded mb-5 d-flex related_card flex-row" style="height: 18%;"> <!-- для равномерной высоты -->
                 <a href="{{ selected.get_absolute_url }}" target="_self"> <!-- Место под get_absolute_url -->
                     <img src="{{ selected.preview.url }}" class="card-img-top" alt="Заглушка под видео" style="height: 100%; width:200px">
                 </a>
                 <div class="card-body text-start">
                     <h5 class="related_card-title mb-1">{{ selected.name }}</h5>
-                    <p class="related_selected_card-text mb-1 text-muted">{{ selected.chanel }}</p>
-                    <p class="related_card-text"><small class="text-muted">{{ selected.date }}</small></p>
+                    <p class="related_selected_card-text mb-1 ">{{ selected.chanel }}</p>
+                    <p class="related_card-text"><small class="">{{ selected.date }}</small></p>
                 </div>
             </div>
             {% endfor %}
