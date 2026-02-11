@@ -7,7 +7,10 @@
     <div class="row">
         <div class="col col-xl-5 text-block">
             <h1  class="mt-5 ">Портал твоей юности</h1>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, accusantium. Quos, ipsa architecto. Cupiditate incidunt fuga inventore quo possimus. Fugit voluptatibus perferendis doloremque molestias quibusdam quaerat sequi a provident asperiores quidem</p>
+            <p class="">Приветствую тебя на портале проекта "NostalgiaEra"! Раз ты здесь, значит ты почувствовал острую потребность в ностальгии...
+            </p>
+            <p> Каждый "7" год оказывается ключевым: самые мощные культурно-развлекательные пики приходятся именно на эти периоды.</p>
+            <p> На моём развлекательном портале собраны слепки ушедших эпох: библиотеки популярных копьютерных игр, видеоархивы и плейлисты песен, что звучали из каждого Siemens и Ericsson!</p>
         </div>
 
         <div class=" col col-xl-7 text-block mt-5 d-flex justify-content-end">
@@ -18,7 +21,7 @@
         <div class="row">
             <div class="col col-xl-4 text-block">
                 <h1  class=" mt-5 ">Куда отправимся?</h1>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, accusantium. Quos, ipsa architecto. Cupiditate incidunt fuga inventore quo possimus. Fugit voluptatibus perferendis doloremque molestias quibusdam quaerat sequi a provident asperiores quidem</p>
+                <p class="">Настал момент выбрать тот срез эпохи, когда жизнь ещё была безмятежна, а массовая культура и интернет переживал свой пик.  Вспомните, чем жила молодёжь того времени! Просто выберите таймлайн! <br> А может, заглянете ещё дальше - чем жили до вас?...</p>
             </div>
         </div>
 
@@ -26,28 +29,33 @@
 
         <div class="row mt-5 portal-blocks">
             <div class="col col-xl-6 mb-5">
+                <a href="{% url 'main:home' %}?year=2017">
                 <div class="portal-images d-flex justify-content-center align-items-center position-relative">
                     <span class="portal-year position-absolute">2017</span>
                     <img class="portal-images-img" src="static/bootstrap/img/index/2017.png" alt="2017">
 
 
                 </div>
+                </a>
             </div>
 
              <div class="col col-xl-6 mb-5 d-flex justify-content-end">
+                 <a href="{% url 'main:home' %}?year=2007">
                  <div class="portal-images zeroseven d-flex justify-content-center align-items-center position-relative">
                      <span class="portal-year position-absolute">2007</span>
                      <img class="portal-images-img" src="static/bootstrap/img/index/2007.jpg" alt="2007">
 
                  </div>
+                 </a>
             </div>
             <div class="col col-xl-6 mb-5">
+                <a href="{% url 'main:home' %}?year=1997">
                 <div class="portal-images  d-flex justify-content-center align-items-center position-relative">
                     <span class="portal-year position-absolute">1997</span>
                     <img class="portal-images-img" src="static/bootstrap/img/index/1997.jpg" alt="1997">
 
                 </div>
-
+                </a>
             </div>
 
             <div class="col col-xl-6 mb-5 d-flex justify-content-end position-relative">

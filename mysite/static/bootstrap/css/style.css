@@ -89,7 +89,7 @@ a {
     overflow: hidden;
     width: 550px;
     height: 350px;
-    background-color: var(--color1);
+    background-color: black;
 }
 
 .portal-images-img{
@@ -102,7 +102,7 @@ a {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* степень затемнения */
+    background: rgba(0, 0, 0, 0.4);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
