@@ -6,7 +6,20 @@
     <div class="row d-flex justify-content-center">
         <div class="col col-xl-6 mt-5 mb-5 d-flex ">
             <div class="login-board ">
+                {% if user.is_authenticated %}
+                <h2 class="login-logout-title">Выход</h2>
+                {% else %}
                 <h2 class="login-logout-title">Вход</h2>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                    <form method="post" action="{% url 'auth:logout' %}">
+                        {% csrf_token %}
+                        <button class="login-button" type="submit">
+                            Выйти из аккаунта
+                        </button>
+                    </form>
+                {% else %}
 
                 <form method="post">
                     {% csrf_token %}
@@ -22,6 +35,8 @@
                     </div>
                    <button class="login-button" type="submit">Войти</button>
                 </form>
+
+                {% endif %}
 
                 <a href="{% url 'auth:register' %}">Регистрация</a>
             </div>
